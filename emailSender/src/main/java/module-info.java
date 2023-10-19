@@ -6,4 +6,6 @@ module com.emailsender.emailsender {
 
     opens com.emailsender.emailsender to javafx.fxml;
     exports com.emailsender.emailsender;
+    exports com.emailsender.emailsender.controller;
+    opens com.emailsender.emailsender.controller to javafx.fxml;
 }
