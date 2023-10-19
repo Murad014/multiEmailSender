@@ -11,7 +11,7 @@
 <?import javafx.scene.control.Button?>
 
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emailsender.emailsender.controller.MainController">
    <children>
       <HBox alignment="TOP_RIGHT" prefHeight="69.0" prefWidth="1023.0">
          <children>
@@ -26,7 +26,7 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="addEmailBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="ADD">
+            <Button fx:id="addEmailBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="ADD" onAction="#addEmailBtnClick">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
