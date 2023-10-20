@@ -1,19 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import java.lang.*?>
 <?import javafx.scene.text.*?>
 <?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
-<?import java.lang.*?>
 <?import javafx.scene.layout.*?>
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.control.Button?>
-
 
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.emailsender.emailsender.controller.MainController">
    <children>
       <HBox alignment="TOP_RIGHT" prefHeight="69.0" prefWidth="1023.0">
+         <VBox.margin>
+            <Insets bottom="10.0" top="10.0" />
+         </VBox.margin>
          <children>
             <Button fx:id="propertiesEmailBtn" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="116.0" text="Properties">
                <font>
@@ -26,7 +24,7 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="addEmailBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="ADD" onAction="#addEmailBtnClick">
+            <Button fx:id="addEmailBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#addEmailBtnClick" prefHeight="37.0" prefWidth="103.0" text="ADD">
                <opaqueInsets>
                   <Insets />
                </opaqueInsets>
@@ -60,18 +58,15 @@
                </HBox.margin>
             </Button>
          </children>
-         <VBox.margin>
-            <Insets bottom="10.0" top="10.0" />
-         </VBox.margin>
       </HBox>
       <TableView prefHeight="628.0" prefWidth="1023.0">
-        <columns>
-          <TableColumn prefWidth="254.0" text="Sender" />
-          <TableColumn minWidth="0.0" prefWidth="226.0" text="Receiver" />
-            <TableColumn prefWidth="166.0" text="Subject" />
-            <TableColumn prefWidth="187.0" text="Desired Time" />
-            <TableColumn prefWidth="189.0" text="Before Time" />
-        </columns>
+         <columns>
+            <TableColumn fx:id="senderColumn" prefWidth="254.0" text="Sender" />
+            <TableColumn fx:id="receiverColumn" minWidth="0.0" prefWidth="226.0" text="Receiver" />
+            <TableColumn fx:id="subjectColumn" prefWidth="166.0" text="Subject" />
+            <TableColumn fx:id="desiredTimeColumn" prefWidth="187.0" text="Desired Time" />
+            <TableColumn fx:id="beforeTimeColumn" prefWidth="189.0" text="Before Time" />
+         </columns>
       </TableView>
    </children>
 </VBox>

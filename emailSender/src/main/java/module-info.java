@@ -1,6 +1,9 @@
 module com.emailsender.emailsender {
     requires javafx.controls;
     requires javafx.fxml;
+    requires com.fasterxml.jackson.databind;
+    requires lombok;
+
 
     requires com.dlsc.formsfx;
 
@@ -8,4 +11,6 @@ module com.emailsender.emailsender {
     exports com.emailsender.emailsender;
     exports com.emailsender.emailsender.controller;
     opens com.emailsender.emailsender.controller to javafx.fxml;
+
+    exports com.emailsender.emailsender.model;
 }
