@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="Back - Step 4">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/UpdateEmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/exception/ResourceNotFoundException.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailFormEnum.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/helper/MapHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/helper/MapHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSendersModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSendersModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/email-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/email-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Enum" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$/.." value="Main_View" />
+      </map>
+    </option>
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2WwTEgvJtp0ePK84Gz1e3m4NJZk" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Back&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.emailsender.emailsender.controller" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Application.Test">
+    <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.emailsender.emailsender.MainApplication" />
+      <module name="emailSender" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emailsender.emailsender.controller.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Test" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.emailsender.emailsender.validation.Test" />
+      <module name="emailSender" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.emailsender.emailsender.validation.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Test" />
+        <item itemvalue="Application.MainApplication" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="" />
+      <created>1697642535960</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1697642535960</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Project initialize">
+      <option name="closed" value="true" />
+      <created>1697642651514</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1697642651514</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Initialize 2">
+      <option name="closed" value="true" />
+      <created>1697728204661</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1697728204661</updated>
+    </task>
+    <task id="LOCAL-00003" summary="View">
+      <option name="closed" value="true" />
+      <created>1697733447665</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1697733447665</updated>
+    </task>
+    <task id="LOCAL-00004" summary="Back - Step 2">
+      <option name="closed" value="true" />
+      <created>1697737367166</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1697737367166</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Back - Step 3">
+      <option name="closed" value="true" />
+      <created>1697833486552</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1697833486552</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Back - Step 4">
+      <option name="closed" value="true" />
+      <created>1697911605952</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1697911605952</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
+    <servers />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="Project initialize" />
+    <MESSAGE value="Initialize 2" />
+    <MESSAGE value="View" />
+    <MESSAGE value="Back - Step 2" />
+    <MESSAGE value="Back - Step 3" />
+    <MESSAGE value="Back - Step 4" />
+    <option name="LAST_COMMIT_MESSAGE" value="Back - Step 4" />
+  </component>
+</project>
