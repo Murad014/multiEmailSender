@@ -1,10 +1,13 @@
 package com.emailsender.emailsender.controller;
 
 import com.emailsender.emailsender.MainApplication;
+import com.emailsender.emailsender.exception.ResourceNotFoundException;
+import com.emailsender.emailsender.model.EmailFormEnum;
 import com.emailsender.emailsender.model.EmailSenderModel;
 import com.emailsender.emailsender.model.EmailSendersModel;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
+import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -14,6 +17,9 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Objects;
+
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class MainController {
@@ -24,38 +30,62 @@ public class MainController {
     public Button deleteEmailBtn;
     public Button propertiesEmailBtn;
     @FXML
-    public static TableColumn<EmailSenderModel, String> senderColumn;
+    public TableColumn<EmailSenderModel, String> senderColumn;
     @FXML
-    public static TableColumn<EmailSenderModel, String> receiverColumn;
+    public TableColumn<EmailSenderModel, String> receiverColumn;
     @FXML
-    public static TableColumn<EmailSenderModel, String> subjectColumn;
+    public TableColumn<EmailSenderModel, String> subjectColumn;
     @FXML
-    public static TableColumn<EmailSenderModel, String> desiredTimeColumn;
+    public TableColumn<EmailSenderModel, String> desiredTimeColumn;
     @FXML
-    public static TableColumn<EmailSenderModel, Double> beforeTimeColumn;
+    public TableColumn<EmailSenderModel, Double> beforeTimeColumn;
     @FXML
-    private static TableView<EmailSendersModel> emailTableView;
+    private TableView<EmailSenderModel> emailsTableView;
 
-    static EmailSendersModel emailSendersModel;
+    static EmailSendersModel emailSendersModel = new EmailSendersModel();
+
+    @FXML
+    public void initialize(){
+
+    }
 
 
     @FXML
     private void addEmailBtnClick(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
-        addNewEmailSenderForm(stage);
+        addNewEmailToSenderForm(stage, EmailFormEnum.ADD_EMAIL_FORM);
         disableAndEnabledUpdateAndAddButtons(stage);
+
     }
 
 
-    private void addNewEmailSenderForm(Stage stage) throws IOException {
+    private void addNewEmailToSenderForm(Stage stage, EmailFormEnum controllerName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("email-view.fxml"));
-        AddEmailController timerStatusController = new AddEmailController(new EmailSenderModel());
-        fxmlLoader.setController(timerStatusController);
+
+        switch (controllerName){
+            case ADD_EMAIL_FORM:
+                AddEmailController emailAddController = new AddEmailController(
+                        new EmailSenderModel(),
+                        this);
+                fxmlLoader.setController(emailAddController);
+                break;
+            case UPDATE_EMAIL_FORM:
+                EmailSenderModel selectedEmailSender = emailsTableView.getSelectionModel().getSelectedItem();
+                UpdateEmailController emailUpdateController = new UpdateEmailController(
+                        selectedEmailSender,
+                        this);
+                fxmlLoader.setController(emailUpdateController);
+                break;
+            default:
+                throw new ResourceNotFoundException(controllerName.toString());
+        }
+
         Scene scene = new Scene(fxmlLoader.load());
         stage.setTitle("Time Status");
         stage.setScene(scene);
         stage.show();
     }
+
 
     private void disableAndEnabledUpdateAndAddButtons(Stage stage){
         addEmailBtn.setDisable(true);
@@ -66,18 +96,31 @@ public class MainController {
         });
     }
 
-    static void addEmailToEmailsListTable(EmailSenderModel emailSenderModel){
-        emailSendersModel.emailSenderModel
-                .add(emailSenderModel);
-
+    void addEmailToEmailsListTable(EmailSenderModel emailSenderModel){
         senderColumn.setCellValueFactory(new PropertyValueFactory<>("senderEmail"));
         receiverColumn.setCellValueFactory(new PropertyValueFactory<>("receiverEmail"));
         desiredTimeColumn.setCellValueFactory(new PropertyValueFactory<>("desiredDateTime"));
         subjectColumn.setCellValueFactory(new PropertyValueFactory<>("subject"));
         beforeTimeColumn.setCellValueFactory(new PropertyValueFactory<>("beforeSendSecond"));
 
-        ObservableList<EmailSendersModel> senders = emailTableView.getItems();
-        emailTableView.setItems(senders);
+        ObservableList<EmailSenderModel> senders = emailsTableView.getItems();
+        senders.add(emailSenderModel);
+        emailsTableView.setItems(senders);
     }
 
+    void updateEmailTableView(){
+        emailsTableView.getItems().setAll(emailSendersModel.emailSenderModel);
+        emailsTableView.refresh();
+    }
+
+    void addEmailToEmailsSenderModel(EmailSenderModel emailSenderModel){
+        emailSendersModel.emailSenderModel.add(emailSenderModel);
+    }
+
+    public void updateEmailBtnClick(ActionEvent actionEvent) throws IOException {
+        Stage stage = new Stage();
+        addNewEmailToSenderForm(stage, EmailFormEnum.UPDATE_EMAIL_FORM);
+        disableAndEnabledUpdateAndAddButtons(stage);
+
+    }
 }

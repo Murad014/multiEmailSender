@@ -1,21 +1,17 @@
 package com.emailsender.emailsender.controller;
 
-import com.emailsender.emailsender.exception.ValidationException;
 import com.emailsender.emailsender.helper.MapHelper;
 import com.emailsender.emailsender.model.EmailSenderModel;
-import com.emailsender.emailsender.model.EmailSendersModel;
 import com.emailsender.emailsender.validation.EmailSendFormValidation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
-import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
 
-
-public class AddEmailController {
+public class UpdateEmailController {
     @FXML
     public TextField senderEmailTextField;
     @FXML
@@ -42,23 +38,24 @@ public class AddEmailController {
     private final MainController mainController;
 
 
-    public AddEmailController(EmailSenderModel emailSender,
+    public UpdateEmailController(EmailSenderModel emailSender,
                               MainController mainController){
         this.emailSender = emailSender;
         this.mainController = mainController;
     }
 
     @FXML
-    public void initialize(){ }
+    public void initialize(){
+        // Initialize the inputs of form
+        MapHelper.setControllerFieldsFromEmailSenderModel(this, emailSender);
+    }
 
     @FXML
     private void setEmailSenderBtnClick(){
-        EmailSenderModel emailSenderModel = MapHelper.setEmailControllerFieldsToEmailSenderModel(this,
+        MapHelper.setEmailControllerFieldsToEmailSenderModel(this,
                 emailSender);
-
-        EmailSendFormValidation.isValidEmailForm(emailSenderModel);
-        mainController.addEmailToEmailsListTable(emailSenderModel);
-        mainController.addEmailToEmailsSenderModel(emailSenderModel);
+        EmailSendFormValidation.isValidEmailForm(emailSender);
+        mainController.updateEmailTableView();
     }
 
     @FXML
