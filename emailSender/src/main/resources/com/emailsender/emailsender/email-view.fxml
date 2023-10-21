@@ -6,24 +6,25 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="632.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="746.0" prefWidth="1023.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
+   <!--      fx:controller="com.emailsender.emailsender.controller.AddEmailController"      -->
       <GridPane prefHeight="632.0" prefWidth="1023.0">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.0" minWidth="10.0" prefWidth="246.0" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="817.0" minWidth="10.0" prefWidth="239.0" />
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="507.0" minWidth="10.0" prefWidth="246.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="817.0" minWidth="10.0" prefWidth="239.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="817.0" minWidth="10.0" prefWidth="224.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="817.0" minWidth="10.0" prefWidth="220.0" />
             <ColumnConstraints hgrow="SOMETIMES" maxWidth="817.0" minWidth="10.0" prefWidth="112.0" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="206.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="571.0" minHeight="7.0" prefHeight="42.0" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="600.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints maxHeight="206.0" minHeight="0.0" prefHeight="28.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="571.0" minHeight="7.0" prefHeight="42.0" vgrow="SOMETIMES" />
+            <RowConstraints maxHeight="600.0" minHeight="0.0" prefHeight="27.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="600.0" minHeight="10.0" prefHeight="39.0" vgrow="SOMETIMES" />
             <RowConstraints maxHeight="600.0" minHeight="10.0" prefHeight="492.0" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
+         </rowConstraints>
+      <children>
             <Label text="Sender">
                <font>
                   <Font name="Times New Roman Bold" size="15.0" />
@@ -32,7 +33,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField prefHeight="26.0" prefWidth="181.0" GridPane.rowIndex="1">
+            <TextField fx:id="senderEmailTextField" prefHeight="26.0" prefWidth="181.0" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -45,7 +46,7 @@
                   <Font name="Times New Roman Bold" size="15.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <TextField fx:id="receiverTextField" GridPane.columnIndex="1" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -58,7 +59,7 @@
                   <Font name="Times New Roman Bold" size="15.0" />
                </font>
             </Label>
-            <PasswordField prefHeight="27.0" prefWidth="175.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
+            <PasswordField fx:id="passwordTextField" prefHeight="27.0" prefWidth="175.0" GridPane.columnIndex="2" GridPane.rowIndex="1">
                <GridPane.margin>
                   <Insets right="5.0" />
                </GridPane.margin>
@@ -73,7 +74,7 @@
                   <Font name="Times New Roman Bold" size="15.0" />
                </font>
             </Label>
-            <TextField GridPane.columnIndex="3" GridPane.rowIndex="1">
+            <TextField fx:id="desiredTimeTextField" GridPane.columnIndex="3" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -81,7 +82,7 @@
                   <Insets right="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextField GridPane.columnIndex="4" GridPane.rowIndex="1">
+            <TextField fx:id="beforeAtTextField" GridPane.columnIndex="4" GridPane.rowIndex="1">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -97,7 +98,7 @@
                   <Insets left="10.0" />
                </GridPane.margin>
             </Label>
-            <TextField prefHeight="26.0" prefWidth="181.0" GridPane.columnSpan="4" GridPane.rowIndex="3">
+            <TextField fx:id="subjectEmailTextField" prefHeight="26.0" prefWidth="181.0" GridPane.columnSpan="4" GridPane.rowIndex="3">
                <font>
                   <Font name="Times New Roman" size="14.0" />
                </font>
@@ -105,12 +106,12 @@
                   <Insets left="10.0" right="5.0" />
                </GridPane.margin>
             </TextField>
-            <TextArea prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="4">
+            <TextArea fx:id="contentTextField" prefHeight="200.0" prefWidth="200.0" GridPane.columnSpan="5" GridPane.rowIndex="4">
                <GridPane.margin>
                   <Insets bottom="10.0" left="10.0" right="10.0" />
                </GridPane.margin>
             </TextArea>
-            <Button fx:id="setBtn" mnemonicParsing="false" prefHeight="10.0" prefWidth="99.0" text="Set" GridPane.columnIndex="4" GridPane.rowIndex="3">
+            <Button fx:id="setBtn" mnemonicParsing="false" onAction="#setEmailSenderBtnClick" prefHeight="10.0" prefWidth="99.0" text="Save" textFill="#2c8d1f" GridPane.columnIndex="4" GridPane.rowIndex="3">
                <font>
                   <Font name="System Bold" size="16.0" />
                </font>
@@ -118,7 +119,30 @@
                   <Insets bottom="7.0" right="10.0" />
                </GridPane.margin>
             </Button>
-         </children>
+      </children>
       </GridPane>
+      <HBox prefHeight="109.0" prefWidth="1023.0">
+         <children>
+            <ListView fx:id="filesListView" prefHeight="109.0" prefWidth="906.0">
+               <HBox.margin>
+                  <Insets left="10.0" />
+               </HBox.margin>
+            </ListView>
+            <Button mnemonicParsing="false" onAction="#addFileToFileListView" prefHeight="110.0" prefWidth="118.0" text="Add File">
+               <font>
+                  <Font name="System Bold Italic" size="15.0" />
+               </font>
+               <padding>
+                  <Insets right="10.0" />
+               </padding>
+               <HBox.margin>
+                  <Insets left="3.0" />
+               </HBox.margin>
+            </Button>
+         </children>
+         <padding>
+            <Insets right="10.0" />
+         </padding>
+      </HBox>
    </children>
 </VBox>
