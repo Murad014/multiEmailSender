@@ -2,6 +2,7 @@ package com.emailsender.emailsender.model;
 
 
 import java.util.List;
+import java.util.Properties;
 
 public class EmailSenderModel {
 
@@ -13,6 +14,7 @@ public class EmailSenderModel {
     private List<String> files;
     private String desiredDateTime;
     private double beforeSendSecond;
+    private Properties properties = new Properties();
 
     public EmailSenderModel(){}
 
@@ -32,8 +34,23 @@ public class EmailSenderModel {
         this.files = files;
         this.desiredDateTime = desiredDateTime;
         this.beforeSendSecond = beforeSendSecond;
+
+        properties.put("mail.smtp.auth", "true");
+        properties.put("mail.smtp.starttls.enable", "true");
+        properties.put("mail.smtp.host", "smtp.mail.ru");
+        properties.put("mail.smtp.ssl.enable", "true");
+        properties.put("smtp.mail.ru", "465");
+
+
     }
 
+    public Properties getProperties() {
+        return properties;
+    }
+
+    public void setProperties(Properties properties) {
+        this.properties = properties;
+    }
 
     public String getSenderEmail() {
         return senderEmail;

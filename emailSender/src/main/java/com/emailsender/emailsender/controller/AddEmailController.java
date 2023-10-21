@@ -1,5 +1,6 @@
 package com.emailsender.emailsender.controller;
 
+import com.emailsender.emailsender.MainApplication;
 import com.emailsender.emailsender.exception.ValidationException;
 import com.emailsender.emailsender.helper.MapHelper;
 import com.emailsender.emailsender.model.EmailSenderModel;
@@ -9,10 +10,14 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.FileChooser;
 import javafx.stage.Stage;
+
+import java.io.IOException;
 
 
 public class AddEmailController {
@@ -73,6 +78,18 @@ public class AddEmailController {
         filesListView.setItems(sendFilesList);
     }
 
+    @FXML
+    private void propertiesBtnClick(ActionEvent actionEvent) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("emailProperties-view.fxml"));
+        PropertiesEmailController emailAddController = new PropertiesEmailController(emailSender);
+        fxmlLoader.setController(emailAddController);
+        Scene scene = new Scene(fxmlLoader.load());
+        Stage stage = new Stage();
+        stage.setTitle("Properties");
+        stage.setScene(scene);
+        stage.show();
+
+    }
 
 
 

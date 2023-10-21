@@ -5,20 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="Back - Step 4">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/UpdateEmailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/exception/ResourceNotFoundException.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailFormEnum.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/uiDesigner.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/PropertiesEmailController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/emailProperties-view.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/helper/MapHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/helper/MapHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/UpdateEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/UpdateEmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSendersModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSendersModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/email-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/email-view.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" afterDir="false" />
     </list>
@@ -81,7 +74,7 @@
       <recent name="com.emailsender.emailsender.controller" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Test">
+  <component name="RunManager" selected="Application.MainApplication">
     <configuration name="MainApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.emailsender.emailsender.MainApplication" />
       <module name="emailSender" />
@@ -110,8 +103,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Test" />
         <item itemvalue="Application.MainApplication" />
+        <item itemvalue="Application.Test" />
       </list>
     </recent_temporary>
   </component>
@@ -172,7 +165,15 @@
       <option name="project" value="LOCAL" />
       <updated>1697911605952</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="Back - Step 4">
+      <option name="closed" value="true" />
+      <created>1697912202610</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1697912202610</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

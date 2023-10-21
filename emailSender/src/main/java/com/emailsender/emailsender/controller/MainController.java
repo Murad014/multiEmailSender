@@ -61,27 +61,28 @@ public class MainController {
 
     private void addNewEmailToSenderForm(Stage stage, EmailFormEnum controllerName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("email-view.fxml"));
-
-        switch (controllerName){
-            case ADD_EMAIL_FORM:
+        String titleName;
+        switch (controllerName) {
+            case ADD_EMAIL_FORM -> {
                 AddEmailController emailAddController = new AddEmailController(
                         new EmailSenderModel(),
                         this);
                 fxmlLoader.setController(emailAddController);
-                break;
-            case UPDATE_EMAIL_FORM:
+                titleName = "Add new email";
+            }
+            case UPDATE_EMAIL_FORM -> {
                 EmailSenderModel selectedEmailSender = emailsTableView.getSelectionModel().getSelectedItem();
                 UpdateEmailController emailUpdateController = new UpdateEmailController(
                         selectedEmailSender,
                         this);
                 fxmlLoader.setController(emailUpdateController);
-                break;
-            default:
-                throw new ResourceNotFoundException(controllerName.toString());
+                titleName = "Update email";
+            }
+            default -> throw new ResourceNotFoundException(controllerName.toString());
         }
 
         Scene scene = new Scene(fxmlLoader.load());
-        stage.setTitle("Time Status");
+        stage.setTitle(titleName);
         stage.setScene(scene);
         stage.show();
     }
