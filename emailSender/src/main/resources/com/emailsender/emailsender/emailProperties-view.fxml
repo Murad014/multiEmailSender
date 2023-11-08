@@ -6,22 +6,21 @@
 <?import java.lang.*?>
 <?import javafx.scene.layout.*?>
 
-
 <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="294.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <HBox prefHeight="43.0" prefWidth="450.0">
          <children>
-            <TextField prefHeight="25.0" prefWidth="177.0" promptText="Key">
+            <TextField fx:id="keyPropertyTextField" prefHeight="25.0" prefWidth="177.0" promptText="Key">
                <HBox.margin>
                   <Insets left="5.0" top="10.0" />
                </HBox.margin>
             </TextField>
-            <TextField prefHeight="25.0" prefWidth="191.0" promptText="Value">
+            <TextField fx:id="valuePropertyTextField" prefHeight="25.0" prefWidth="191.0" promptText="Value">
                <HBox.margin>
                   <Insets left="5.0" top="10.0" />
                </HBox.margin>
             </TextField>
-            <Button mnemonicParsing="false" prefHeight="25.0" prefWidth="60.0" text="Add">
+            <Button fx:id="addPropertyBtn" mnemonicParsing="false" onAction="#addPropertyBtnClick" prefHeight="25.0" prefWidth="60.0" text="Add">
                <HBox.margin>
                   <Insets left="5.0" top="10.0" />
                </HBox.margin>
@@ -31,10 +30,10 @@
             </Button>
          </children>
       </HBox>
-      <TableView prefHeight="245.0" prefWidth="450.0">
+      <TableView fx:id="propertiesTableView" prefHeight="245.0" prefWidth="450.0">
         <columns>
-          <TableColumn prefWidth="209.0" text="Key" />
-          <TableColumn minWidth="0.0" prefWidth="230.0" text="Value" />
+          <TableColumn fx:id="keyPropertyCol" prefWidth="209.0" text="Key" />
+          <TableColumn fx:id="valuePropertyCol" minWidth="0.0" prefWidth="230.0" text="Value" />
         </columns>
          <VBox.margin>
             <Insets left="5.0" right="5.0" />

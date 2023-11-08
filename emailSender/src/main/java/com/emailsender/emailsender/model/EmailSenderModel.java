@@ -35,13 +35,6 @@ public class EmailSenderModel {
         this.desiredDateTime = desiredDateTime;
         this.beforeSendSecond = beforeSendSecond;
 
-        properties.put("mail.smtp.auth", "true");
-        properties.put("mail.smtp.starttls.enable", "true");
-        properties.put("mail.smtp.host", "smtp.mail.ru");
-        properties.put("mail.smtp.ssl.enable", "true");
-        properties.put("smtp.mail.ru", "465");
-
-
     }
 
     public Properties getProperties() {
