@@ -42,6 +42,12 @@ public class PropertiesEmailController {
     public void addPropertyBtnClick(ActionEvent actionEvent) {
         addPropertyToEmailSenderModelProperties();
         addElementsToPropertiesTableView();
+        clearInputTextFields();
+    }
+
+    private void clearInputTextFields(){
+        keyPropertyTextField.clear();
+        valuePropertyTextField.clear();
     }
 
     private void addElementsToPropertiesTableView(){

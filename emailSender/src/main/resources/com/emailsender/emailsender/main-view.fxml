@@ -35,7 +35,7 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="deleteEmailBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="116.0" style="-fx-alignment: center;" text="DELETE">
+            <Button fx:id="deleteEmailBtn" onAction="#clickDeleteButton" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="116.0" style="-fx-alignment: center;" text="DELETE">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>

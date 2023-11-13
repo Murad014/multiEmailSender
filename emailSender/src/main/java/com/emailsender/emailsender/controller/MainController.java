@@ -5,6 +5,7 @@ import com.emailsender.emailsender.exception.ResourceNotFoundException;
 import com.emailsender.emailsender.model.EmailFormEnum;
 import com.emailsender.emailsender.model.EmailSenderModel;
 import com.emailsender.emailsender.model.EmailSendersModel;
+import com.emailsender.emailsender.utils.TableUtils;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -56,6 +57,11 @@ public class MainController {
         addNewEmailToSenderForm(stage, EmailFormEnum.ADD_EMAIL_FORM);
         disableAndEnabledUpdateAndAddButtons(stage);
 
+    }
+
+    @FXML
+    private void clickDeleteButton(ActionEvent actionEvent){
+        TableUtils.deleteSelectedRows(emailsTableView);
     }
 
 
