@@ -33,7 +33,6 @@ public class EmailSendFormValidation {
     }
 
     public static void isValidEmailForm(EmailSenderModel emailSenderModel){
-        System.out.println(emailSenderModel);
         String senderEmail = emailSenderModel.getSenderEmail();
         String receiverEmail = emailSenderModel.getReceiverEmail();
         String desiredTime = emailSenderModel.getDesiredDateTime();

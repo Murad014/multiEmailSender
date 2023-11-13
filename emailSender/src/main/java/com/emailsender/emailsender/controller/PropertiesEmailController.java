@@ -1,6 +1,7 @@
 package com.emailsender.emailsender.controller;
 
 import com.emailsender.emailsender.model.EmailSenderModel;
+import com.emailsender.emailsender.utils.TextFieldUtils;
 import javafx.beans.property.SimpleStringProperty;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -46,8 +47,7 @@ public class PropertiesEmailController {
     }
 
     private void clearInputTextFields(){
-        keyPropertyTextField.clear();
-        valuePropertyTextField.clear();
+        TextFieldUtils.clearTextFields(keyPropertyTextField, valuePropertyTextField);
     }
 
     private void addElementsToPropertiesTableView(){

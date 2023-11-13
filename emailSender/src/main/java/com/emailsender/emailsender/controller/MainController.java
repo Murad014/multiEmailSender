@@ -6,6 +6,7 @@ import com.emailsender.emailsender.model.EmailFormEnum;
 import com.emailsender.emailsender.model.EmailSenderModel;
 import com.emailsender.emailsender.model.EmailSendersModel;
 import com.emailsender.emailsender.utils.TableUtils;
+import com.emailsender.emailsender.utils.Utils;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -47,23 +48,22 @@ public class MainController {
 
     @FXML
     public void initialize(){
-
+        Utils.fillEmailSendersModelFromConfig(emailSendersModel); // Config is emails.txt
+        updateEmailTableView();
+        System.out.println(emailSendersModel.emailSenderModel.size());
     }
-
 
     @FXML
     private void addEmailBtnClick(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
         addNewEmailToSenderForm(stage, EmailFormEnum.ADD_EMAIL_FORM);
         disableAndEnabledUpdateAndAddButtons(stage);
-
     }
 
     @FXML
     private void clickDeleteButton(ActionEvent actionEvent){
         TableUtils.deleteSelectedRows(emailsTableView);
     }
-
 
     private void addNewEmailToSenderForm(Stage stage, EmailFormEnum controllerName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("email-view.fxml"));
@@ -93,7 +93,6 @@ public class MainController {
         stage.show();
     }
 
-
     private void disableAndEnabledUpdateAndAddButtons(Stage stage){
         addEmailBtn.setDisable(true);
         updateEmailBtn.setDisable(true);
@@ -118,10 +117,13 @@ public class MainController {
     void updateEmailTableView(){
         emailsTableView.getItems().setAll(emailSendersModel.emailSenderModel);
         emailsTableView.refresh();
+        Utils.convertObjectListToStringAndWriteToFile(emailSendersModel.emailSenderModel);
     }
 
     void addEmailToEmailsSenderModel(EmailSenderModel emailSenderModel){
         emailSendersModel.emailSenderModel.add(emailSenderModel);
+        Utils.convertObjectListToStringAndWriteToFile(emailSendersModel.emailSenderModel);
+
     }
 
     public void updateEmailBtnClick(ActionEvent actionEvent) throws IOException {

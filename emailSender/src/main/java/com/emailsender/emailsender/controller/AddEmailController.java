@@ -5,6 +5,7 @@ import com.emailsender.emailsender.exception.ValidationException;
 import com.emailsender.emailsender.helper.MapHelper;
 import com.emailsender.emailsender.model.EmailSenderModel;
 import com.emailsender.emailsender.model.EmailSendersModel;
+import com.emailsender.emailsender.utils.Utils;
 import com.emailsender.emailsender.validation.EmailSendFormValidation;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -64,6 +65,7 @@ public class AddEmailController {
         EmailSendFormValidation.isValidEmailForm(emailSenderModel);
         mainController.addEmailToEmailsListTable(emailSenderModel);
         mainController.addEmailToEmailsSenderModel(emailSenderModel);
+
     }
 
     @FXML

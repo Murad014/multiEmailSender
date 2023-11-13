@@ -4,11 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="Back - Step 5">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/TableUtils.java" afterDir="false" />
+    <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="Back - Step 6">
+      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/emails.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/output.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/User.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/config/ConfigHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/ButtonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/FileUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/JsonUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/TextFieldUtils.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/TestMain.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/PropertiesEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/PropertiesEmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/helper/MapHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/helper/MapHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/validation/EmailSendFormValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/validation/EmailSendFormValidation.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -201,7 +215,14 @@
       <option name="project" value="LOCAL" />
       <updated>1697919781116</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Back - Step 6">
+      <created>1699859113566</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1699859113566</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -224,6 +245,25 @@
     <MESSAGE value="Back - Step 3" />
     <MESSAGE value="Back - Step 4" />
     <MESSAGE value="Back - Step 5" />
-    <option name="LAST_COMMIT_MESSAGE" value="Back - Step 5" />
+    <MESSAGE value="Back - Step 6" />
+    <option name="LAST_COMMIT_MESSAGE" value="Back - Step 6" />
+  </component>
+  <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
+    <option name="historyDtoById">
+      <map>
+        <entry key="greeting">
+          <value>
+            <ChatHistoryModel>
+              <option name="id" value="greeting" />
+              <option name="initiateTms" value="1699861083688" />
+              <option name="request" value="" />
+              <option name="response" value="" />
+              <option name="responseDescription" value="&#10;Hello, I am Machinet AI - context aware chat, which can help you with your daily programming routine. How can I help?" />
+              <option name="responseTms" value="1699861085414" />
+            </ChatHistoryModel>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
 </project>
