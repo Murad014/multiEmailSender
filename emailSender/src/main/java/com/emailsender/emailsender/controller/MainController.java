@@ -49,8 +49,7 @@ public class MainController {
     @FXML
     public void initialize(){
         Utils.fillEmailSendersModelFromConfig(emailSendersModel); // Config is emails.txt
-        updateEmailTableView();
-        System.out.println(emailSendersModel.emailSenderModel.size());
+        addEmailsToEmailsListTable(emailSendersModel);
     }
 
     @FXML
@@ -112,6 +111,11 @@ public class MainController {
         ObservableList<EmailSenderModel> senders = emailsTableView.getItems();
         senders.add(emailSenderModel);
         emailsTableView.setItems(senders);
+    }
+
+    private void addEmailsToEmailsListTable(EmailSendersModel emailSendersModel){
+        for(EmailSenderModel emailSenderModel: emailSendersModel.emailSenderModel)
+            addEmailToEmailsListTable(emailSenderModel);
     }
 
     void updateEmailTableView(){
