@@ -62,7 +62,10 @@ public class MainController {
     @FXML
     private void clickDeleteButton(ActionEvent actionEvent){
         TableUtils.deleteSelectedRows(emailsTableView);
+        Utils.deleteEmailSenderFromEmailSendersModel(emailSendersModel, emailsTableView);
+        Utils.convertObjectListToStringAndWriteToFile(emailSendersModel.emailSenderModel);
     }
+
 
     private void addNewEmailToSenderForm(Stage stage, EmailFormEnum controllerName) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(MainApplication.class.getResource("email-view.fxml"));

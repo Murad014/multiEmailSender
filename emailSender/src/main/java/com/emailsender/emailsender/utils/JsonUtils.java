@@ -13,7 +13,6 @@ import java.util.List;
 
 public class JsonUtils {
 
-
     public static <T> String convertObjectListToJsonString(List<T> listUsers){
         try {
             ObjectMapper objectMapper = new ObjectMapper();
