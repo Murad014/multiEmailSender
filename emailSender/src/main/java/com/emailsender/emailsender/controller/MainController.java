@@ -5,6 +5,8 @@ import com.emailsender.emailsender.exception.ResourceNotFoundException;
 import com.emailsender.emailsender.model.EmailFormEnum;
 import com.emailsender.emailsender.model.EmailSenderModel;
 import com.emailsender.emailsender.model.EmailSendersModel;
+import com.emailsender.emailsender.utils.TableUtils;
+import com.emailsender.emailsender.utils.Utils;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.event.Event;
@@ -46,16 +48,22 @@ public class MainController {
 
     @FXML
     public void initialize(){
-
+        Utils.fillEmailSendersModelFromConfig(emailSendersModel); // Config is emails.txt
+        addEmailsToEmailsListTable(emailSendersModel);
     }
-
 
     @FXML
     private void addEmailBtnClick(ActionEvent actionEvent) throws IOException {
         Stage stage = new Stage();
         addNewEmailToSenderForm(stage, EmailFormEnum.ADD_EMAIL_FORM);
         disableAndEnabledUpdateAndAddButtons(stage);
+    }
 
+    @FXML
+    private void clickDeleteButton(ActionEvent actionEvent){
+        TableUtils.deleteSelectedRows(emailsTableView);
+        Utils.deleteEmailSenderFromEmailSendersModel(emailSendersModel, emailsTableView);
+        Utils.convertObjectListToStringAndWriteToFile(emailSendersModel.emailSenderModel);
     }
 
 
@@ -87,7 +95,6 @@ public class MainController {
         stage.show();
     }
 
-
     private void disableAndEnabledUpdateAndAddButtons(Stage stage){
         addEmailBtn.setDisable(true);
         updateEmailBtn.setDisable(true);
@@ -109,13 +116,21 @@ public class MainController {
         emailsTableView.setItems(senders);
     }
 
+    private void addEmailsToEmailsListTable(EmailSendersModel emailSendersModel){
+        for(EmailSenderModel emailSenderModel: emailSendersModel.emailSenderModel)
+            addEmailToEmailsListTable(emailSenderModel);
+    }
+
     void updateEmailTableView(){
         emailsTableView.getItems().setAll(emailSendersModel.emailSenderModel);
         emailsTableView.refresh();
+        Utils.convertObjectListToStringAndWriteToFile(emailSendersModel.emailSenderModel);
     }
 
     void addEmailToEmailsSenderModel(EmailSenderModel emailSenderModel){
         emailSendersModel.emailSenderModel.add(emailSenderModel);
+        Utils.convertObjectListToStringAndWriteToFile(emailSendersModel.emailSenderModel);
+
     }
 
     public void updateEmailBtnClick(ActionEvent actionEvent) throws IOException {

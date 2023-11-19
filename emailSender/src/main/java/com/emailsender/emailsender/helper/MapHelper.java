@@ -3,6 +3,8 @@ package com.emailsender.emailsender.helper;
 import com.emailsender.emailsender.controller.AddEmailController;
 import com.emailsender.emailsender.controller.UpdateEmailController;
 import com.emailsender.emailsender.model.EmailSenderModel;
+import com.emailsender.emailsender.utils.FileUtils;
+import com.emailsender.emailsender.utils.Utils;
 import javafx.collections.FXCollections;
 
 import java.util.ArrayList;
@@ -22,7 +24,6 @@ public class MapHelper {
         emailSenderModel.setDesiredDateTime(addEmailController.desiredTimeTextField.getText());
         List<String> files = new ArrayList<>(addEmailController.filesListView.getItems());
         emailSenderModel.setFiles(files);
-
 
         return emailSenderModel;
     }
