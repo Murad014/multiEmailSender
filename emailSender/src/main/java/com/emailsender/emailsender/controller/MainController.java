@@ -61,8 +61,8 @@ public class MainController {
 
     @FXML
     private void clickDeleteButton(ActionEvent actionEvent){
-        TableUtils.deleteSelectedRows(emailsTableView);
         Utils.deleteEmailSenderFromEmailSendersModel(emailSendersModel, emailsTableView);
+        TableUtils.deleteSelectedRows(emailsTableView);
         Utils.convertObjectListToStringAndWriteToFile(emailSendersModel.emailSenderModel);
     }
 

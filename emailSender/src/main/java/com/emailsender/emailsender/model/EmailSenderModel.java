@@ -15,8 +15,20 @@ public class EmailSenderModel {
     private String desiredDateTime;
     private double beforeSendSecond;
     private Properties properties = new Properties();
+    private boolean isStop;
+    private String status;
+
+    private String sentAtTime;
 
     public EmailSenderModel(){}
+
+    public boolean isStop() {
+        return isStop;
+    }
+
+    public void setStop(boolean stop) {
+        isStop = stop;
+    }
 
     public EmailSenderModel(String senderEmail,
                             String receiverEmail,
@@ -25,7 +37,10 @@ public class EmailSenderModel {
                             String content,
                             List<String> files,
                             String desiredDateTime,
-                            double beforeSendSecond) {
+                            double beforeSendSecond,
+                            String status,
+                            boolean isStop,
+                            String sentAtTime) {
         this.senderEmail = senderEmail;
         this.receiverEmail = receiverEmail;
         this.password = password;
@@ -34,8 +49,13 @@ public class EmailSenderModel {
         this.files = files;
         this.desiredDateTime = desiredDateTime;
         this.beforeSendSecond = beforeSendSecond;
+        this.status = status;
+        this.isStop = isStop;
+        this.sentAtTime = sentAtTime;
 
     }
+
+
 
     public Properties getProperties() {
         return properties;
@@ -89,6 +109,14 @@ public class EmailSenderModel {
         return files;
     }
 
+    public String getStatus() {
+        return status;
+    }
+
+    public void setStatus(String status) {
+        this.status = status;
+    }
+
     public void setFiles(List<String> files) {
         this.files = files;
     }
@@ -109,6 +137,13 @@ public class EmailSenderModel {
         this.beforeSendSecond = beforeSendSecond;
     }
 
+    public String getSentAtTime(){
+        return sentAtTime;
+    }
+
+    public void setSentAtTime(String sentAtTime){
+        this.sentAtTime = sentAtTime;
+    }
     @Override
     public String toString() {
         return "EmailSenderModel{" +
@@ -122,4 +157,6 @@ public class EmailSenderModel {
                 ", beforeSendSecond=" + beforeSendSecond +
                 '}';
     }
+
+
 }

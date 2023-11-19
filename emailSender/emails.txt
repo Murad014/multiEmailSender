@@ -1,1 +1,1 @@
-"[{\"senderEmail\":\"test@asda.az\",\"receiverEmail\":\"test@asda.az\",\"password\":\"2132edsaedqwe\",\"subject\":\"asdqwdq\",\"content\":\"asdqwd\\\"asdasdas\\\"'\\\"\",\"files\":[\"C:\\\\Users\\\\murad.guliyev.E-MANAT\\\\Desktop\\\\address.txt\"],\"desiredDateTime\":\"2022-12-12 15:00:11.111\",\"beforeSendSecond\":5.0,\"properties\":{}}]"
+"[]"
