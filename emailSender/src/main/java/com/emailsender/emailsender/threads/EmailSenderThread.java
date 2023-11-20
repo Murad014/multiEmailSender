@@ -33,12 +33,13 @@ public class EmailSenderThread extends Thread{
         try {
             waitForFinishCountdown();
             sendEmail(senderModel, properties);
-        } catch (ParseException e) {
+        } catch (ParseException | InterruptedException e) {
             throw new RuntimeException(e);
         }
     }
 
-    private void waitForFinishCountdown() throws ParseException {
+    private void waitForFinishCountdown() throws ParseException, InterruptedException {
+        System.out.println("waitForFinishCountdown... ");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date desiredTime = dateFormat.parse(Utils.minusBeforeAtFromDesiredTime(senderModel.getDesiredDateTime(),
                 senderModel.getBeforeSendSecond()));
@@ -51,7 +52,8 @@ public class EmailSenderThread extends Thread{
                 senderModel.setStatus("STOPPED");
                 throw new RuntimeException("Stopped thread. Email: " + senderModel.getSenderEmail());
             }
-            senderModel.setBeforeSendSecond(timeDiff);
+            Thread.sleep(0);
+            senderModel.setCountDown(timeDiff);
             timeDiff = (desiredTime.getTime() - new Date().getTime()) / 100;
         }
     }

@@ -8,6 +8,7 @@ public class EmailSenderService {
 
     public void sendEmails(EmailSendersModel emailSendersModel){
         for(EmailSenderModel emailSenderModel: emailSendersModel.emailSenderModel){
+            emailSenderModel.setStop(false);
             EmailSenderThread emailSenderThread = new EmailSenderThread(emailSenderModel.getProperties(),
                     emailSenderModel);
             emailSenderThread.start();
@@ -15,8 +16,9 @@ public class EmailSenderService {
     }
 
     public void stopThreads(EmailSendersModel emailSendersModel){
-        for(EmailSenderModel emailSenderModel: emailSendersModel.emailSenderModel)
+        for(EmailSenderModel emailSenderModel: emailSendersModel.emailSenderModel) {
             emailSenderModel.setStop(true);
+        }
 
 
     }

@@ -37,7 +37,9 @@ public class MainController {
     @FXML
     public TableColumn<EmailSenderModel, String> desiredTimeColumn;
     @FXML
-    public TableColumn<EmailSenderModel, Double> beforeTimeColumn;
+    public TableColumn<EmailSenderModel, Double>  countDownColumn;
+    @FXML
+    public TableColumn<EmailSenderModel, String>  statusColumn;
     @FXML
     private TableView<EmailSenderModel> emailsTableView;
 
@@ -107,7 +109,8 @@ public class MainController {
         receiverColumn.setCellValueFactory(new PropertyValueFactory<>("receiverEmail"));
         desiredTimeColumn.setCellValueFactory(new PropertyValueFactory<>("desiredDateTime"));
         subjectColumn.setCellValueFactory(new PropertyValueFactory<>("subject"));
-        beforeTimeColumn.setCellValueFactory(new PropertyValueFactory<>("beforeSendSecond"));
+        countDownColumn.setCellValueFactory(new PropertyValueFactory<>("countDown"));
+        statusColumn.setCellValueFactory(new PropertyValueFactory<>("status"));
 
         ObservableList<EmailSenderModel> senders = emailsTableView.getItems();
         senders.add(emailSenderModel);

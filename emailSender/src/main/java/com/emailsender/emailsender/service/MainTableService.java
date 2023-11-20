@@ -17,7 +17,7 @@ public class MainTableService {
     private void updateTable(TableView<EmailSenderModel> emailSenderModelTableView){
         for(int i = 0; i < emailSenderModelTableView.getItems().size(); i++){
             EmailSenderModel senderModel = emailSenderModelTableView.getItems().get(i);
-            emailSenderModelTableView.getItems().get(i).setBeforeSendSecond(senderModel.getBeforeSendSecond());
+            emailSenderModelTableView.getItems().get(i).setCountDown(senderModel.getBeforeSendSecond());
         }
         emailSenderModelTableView.refresh();
     }

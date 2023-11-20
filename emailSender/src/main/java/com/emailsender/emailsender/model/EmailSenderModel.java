@@ -19,6 +19,8 @@ public class EmailSenderModel {
     private String status;
     private String sentAtTime;
 
+    private double countDown;
+
     public EmailSenderModel(){}
 
     public boolean isStop() {
@@ -54,7 +56,13 @@ public class EmailSenderModel {
 
     }
 
+    public void setCountDown(double countDown) {
+        this.countDown = countDown;
+    }
 
+    public double getCountDown(){
+        return this.countDown;
+    }
 
     public Properties getProperties() {
         return properties;
