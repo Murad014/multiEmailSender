@@ -13,6 +13,32 @@
             <Insets bottom="10.0" top="10.0" />
          </VBox.margin>
          <children>
+            <HBox prefHeight="32.0" prefWidth="680.0">
+               <children>
+                  <Button fx:id="startThreadsBtn"  onAction="#startThreadBtnBtnClick" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="103.0" text="Start" textFill="#22c332">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="10.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="stopThreadsBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#stopThreadBtnBtnClick" prefHeight="37.0" prefWidth="103.0" text="Stop" textFill="RED">
+                     <font>
+                        <Font name="Times New Roman Bold" size="18.0" />
+                     </font>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
             <Button fx:id="addEmailBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" onAction="#addEmailBtnClick" prefHeight="37.0" prefWidth="103.0" text="ADD">
                <opaqueInsets>
                   <Insets />
@@ -35,7 +61,7 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <Button fx:id="deleteEmailBtn" onAction="#clickDeleteButton" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" prefHeight="37.0" prefWidth="116.0" style="-fx-alignment: center;" text="DELETE">
+            <Button fx:id="deleteEmailBtn" contentDisplay="RIGHT" graphicTextGap="10.0" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" onAction="#clickDeleteButton" prefHeight="37.0" prefWidth="116.0" style="-fx-alignment: center;" text="DELETE">
                <font>
                   <Font name="Times New Roman Bold" size="18.0" />
                </font>

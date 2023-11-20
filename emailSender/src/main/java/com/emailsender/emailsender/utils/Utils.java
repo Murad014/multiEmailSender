@@ -6,6 +6,8 @@ import com.emailsender.emailsender.model.EmailSendersModel;
 import javafx.collections.ObservableList;
 import javafx.scene.control.TableView;
 
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 
 public class Utils {
@@ -24,6 +26,14 @@ public class Utils {
                                                               TableView<T> tableView){
         ObservableList<T> selectedItems = tableView.getSelectionModel().getSelectedItems();
         emails.emailSenderModel.remove(selectedItems.get(0));
+    }
+
+    public static String minusBeforeAtFromDesiredTime(String desiredTime, double beforeAtTime){
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        LocalDateTime dateTime1 = LocalDateTime.parse(desiredTime, formatter);
+        LocalDateTime newDateTime = dateTime1.minusSeconds((long) beforeAtTime);
+
+        return newDateTime.format(formatter);
     }
 
 

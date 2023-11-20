@@ -8,28 +8,29 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.File;
 import java.io.IOException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Date;
 import java.util.List;
 
 public class TestMain {
 
-    public static void main(String... args){
-//        List<User> users = List.of(
-//                new User("murad@asdasd.az", "asdqwdqd"),
-//                new User("asdasd@asdasd.com", "asdaddqwed2")
-//        );
-//
-//        String jsonString = convertObjectListToJsonString(users);
-//        jsonString = readStringFromFile("output.txt");
-//
-//        // Write the JSON string to a text file
-////        writeStringToFile(jsonString, "output.txt");
-//
-//        List<User> userList = convertJsonStringToObject(jsonString);
-//        assert userList != null;
-//        for (User user : userList) {
-//            System.out.println("Email: " + user.getEmail() + ", Password: " + user.getPassword());
-//        }
-        stringToModel();
+    public static void main(String... args) throws ParseException {
+        String dateTimeString = "2023-11-20 15:30:45.123";
+
+        // Parse the string into LocalDateTime using a formatter
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss.SSS");
+        LocalDateTime dateTime1 = LocalDateTime.parse(dateTimeString, formatter);
+
+        // Subtract 6 seconds
+        LocalDateTime newDateTime = dateTime1.minusSeconds(6);
+
+        // Format the new date time back to the specified format
+        String newDateTimeString = newDateTime.format(formatter);
+
+        System.out.println(newDateTimeString);
     }
 
     private static String convertObjectListToJsonString(List<User> listUsers){

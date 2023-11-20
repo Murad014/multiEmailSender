@@ -17,7 +17,6 @@ public class EmailSenderModel {
     private Properties properties = new Properties();
     private boolean isStop;
     private String status;
-
     private String sentAtTime;
 
     public EmailSenderModel(){}

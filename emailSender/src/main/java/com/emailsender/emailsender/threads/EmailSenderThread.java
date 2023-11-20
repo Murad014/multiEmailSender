@@ -1,6 +1,7 @@
 package com.emailsender.emailsender.threads;
 
 import com.emailsender.emailsender.model.EmailSenderModel;
+import com.emailsender.emailsender.utils.Utils;
 
 import java.io.File;
 import java.io.IOException;
@@ -39,7 +40,9 @@ public class EmailSenderThread extends Thread{
 
     private void waitForFinishCountdown() throws ParseException {
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
-        Date desiredTime = dateFormat.parse(senderModel.getDesiredDateTime());
+        Date desiredTime = dateFormat.parse(Utils.minusBeforeAtFromDesiredTime(senderModel.getDesiredDateTime(),
+                senderModel.getBeforeSendSecond()));
+
         long timeDiff = (desiredTime.getTime() - new Date().getTime()) / 100;
 
         while(timeDiff > 0){
@@ -47,9 +50,6 @@ public class EmailSenderThread extends Thread{
                 System.out.println("Stopped thread. Email: " + senderModel.getSenderEmail());
                 throw new RuntimeException("Stopped thread. Email: " + senderModel.getSenderEmail());
             }
-
-            NumberFormat formatter = new DecimalFormat("#00.0");
-            //senderModel.setBeforeSendSecond(formatter.format( (double) timeDiff / 10));
             timeDiff = (desiredTime.getTime() - new Date().getTime()) / 100;
         }
     }

@@ -5,6 +5,7 @@ import com.emailsender.emailsender.exception.ResourceNotFoundException;
 import com.emailsender.emailsender.model.EmailFormEnum;
 import com.emailsender.emailsender.model.EmailSenderModel;
 import com.emailsender.emailsender.model.EmailSendersModel;
+import com.emailsender.emailsender.service.EmailSenderService;
 import com.emailsender.emailsender.utils.TableUtils;
 import com.emailsender.emailsender.utils.Utils;
 import javafx.collections.ObservableList;
@@ -45,6 +46,7 @@ public class MainController {
     private TableView<EmailSenderModel> emailsTableView;
 
     static EmailSendersModel emailSendersModel = new EmailSendersModel();
+    private final EmailSenderService emailSenderService = new EmailSenderService();
 
     @FXML
     public void initialize(){
@@ -137,6 +139,15 @@ public class MainController {
         Stage stage = new Stage();
         addNewEmailToSenderForm(stage, EmailFormEnum.UPDATE_EMAIL_FORM);
         disableAndEnabledUpdateAndAddButtons(stage);
+    }
 
+    @FXML
+    public void startThreadBtnBtnClick(ActionEvent actionEvent){
+        emailSenderService.sendEmails(emailSendersModel);
+    }
+
+    @FXML
+    public void stopThreadBtnBtnClick(ActionEvent actionEvent){
+        emailSenderService.stopThreads(emailSendersModel);
     }
 }

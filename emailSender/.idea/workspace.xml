@@ -4,16 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="Back - Step 8">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/threads/EmailSenderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+    <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="thread almost ready but does not work yet.">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/service/EmailSenderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/emails.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/TestMain.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/TestMain.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/FileUtils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/FileUtils.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/threads/EmailSenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/threads/EmailSenderThread.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/Utils.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/utils/Utils.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/module-info.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/module-info.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699943837244</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="thread almost ready but does not work yet.">
+      <option name="closed" value="true" />
+      <created>1700428539119</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1700428539119</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -253,7 +262,8 @@
     <MESSAGE value="Back - Step 6" />
     <MESSAGE value="Back - Step 7" />
     <MESSAGE value="Back - Step 8" />
-    <option name="LAST_COMMIT_MESSAGE" value="Back - Step 8" />
+    <MESSAGE value="thread almost ready but does not work yet." />
+    <option name="LAST_COMMIT_MESSAGE" value="thread almost ready but does not work yet." />
   </component>
   <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
     <option name="historyDtoById">
