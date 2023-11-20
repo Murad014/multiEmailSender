@@ -48,8 +48,10 @@ public class EmailSenderThread extends Thread{
         while(timeDiff > 0){
             if(senderModel.isStop()) {
                 System.out.println("Stopped thread. Email: " + senderModel.getSenderEmail());
+                senderModel.setStatus("STOPPED");
                 throw new RuntimeException("Stopped thread. Email: " + senderModel.getSenderEmail());
             }
+            senderModel.setBeforeSendSecond(timeDiff);
             timeDiff = (desiredTime.getTime() - new Date().getTime()) / 100;
         }
     }
@@ -86,9 +88,9 @@ public class EmailSenderThread extends Thread{
             message.setContent(multipart);
             Transport.send(message);
             sender.setStatus("SUCCESS");
+            sender.setSentAtTime(LocalDateTime.now().toString());
 
             System.out.println("Email sent successfully from " + sender.getSenderEmail() + " with attachment");
-            sender.setSentAtTime(LocalDateTime.now().toString());
             System.out.println("sendEmail method Email: " + sender.getSenderEmail());
             System.out.println("sendEmail method sent time: " + LocalDateTime.now());
             System.out.println("sendEmail method  Desired Time: " + sender.getDesiredDateTime());

@@ -15,8 +15,10 @@ public class EmailSenderService {
     }
 
     public void stopThreads(EmailSendersModel emailSendersModel){
-        for(int i = 0; i < emailSendersModel.emailSenderModel.size(); i++)
-            emailSendersModel.emailSenderModel.get(i).setStop(true);
+        for(EmailSenderModel emailSenderModel: emailSendersModel.emailSenderModel)
+            emailSenderModel.setStop(true);
+
+
     }
 
 

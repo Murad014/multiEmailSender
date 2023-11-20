@@ -6,11 +6,11 @@ import com.emailsender.emailsender.model.EmailFormEnum;
 import com.emailsender.emailsender.model.EmailSenderModel;
 import com.emailsender.emailsender.model.EmailSendersModel;
 import com.emailsender.emailsender.service.EmailSenderService;
+import com.emailsender.emailsender.service.MainTableService;
 import com.emailsender.emailsender.utils.TableUtils;
 import com.emailsender.emailsender.utils.Utils;
 import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Button;
@@ -20,10 +20,6 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.stage.Stage;
 import javafx.scene.Scene;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Objects;
-
-import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class MainController {
     @FXML
@@ -144,6 +140,7 @@ public class MainController {
     @FXML
     public void startThreadBtnBtnClick(ActionEvent actionEvent){
         emailSenderService.sendEmails(emailSendersModel);
+        new MainTableService().startRefreshTable(emailsTableView);
     }
 
     @FXML
