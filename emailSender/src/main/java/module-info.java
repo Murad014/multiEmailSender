@@ -5,6 +5,7 @@ module com.emailsender.emailsender {
 
 
     requires com.dlsc.formsfx;
+    requires javax.mail.api;
 
     opens com.emailsender.emailsender to javafx.fxml;
     exports com.emailsender.emailsender;

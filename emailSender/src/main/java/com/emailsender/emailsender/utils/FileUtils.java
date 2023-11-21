@@ -13,7 +13,6 @@ public class FileUtils {
             return new ObjectMapper().readValue(file, String.class);
         } catch (IOException e) {
             e.printStackTrace();
-
             return null;
         }
     }
