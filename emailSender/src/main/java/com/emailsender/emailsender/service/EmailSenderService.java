@@ -19,8 +19,6 @@ public class EmailSenderService {
         for(EmailSenderModel emailSenderModel: emailSendersModel.emailSenderModel) {
             emailSenderModel.setStop(true);
         }
-
-
     }
 
 

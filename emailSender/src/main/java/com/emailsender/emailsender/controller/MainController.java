@@ -74,7 +74,8 @@ public class MainController {
             case ADD_EMAIL_FORM -> {
                 AddEmailController emailAddController = new AddEmailController(
                         new EmailSenderModel(),
-                        this);
+                        this,
+                        stage);
                 fxmlLoader.setController(emailAddController);
                 titleName = "Add new email";
             }
@@ -82,7 +83,8 @@ public class MainController {
                 EmailSenderModel selectedEmailSender = emailsTableView.getSelectionModel().getSelectedItem();
                 UpdateEmailController emailUpdateController = new UpdateEmailController(
                         selectedEmailSender,
-                        this);
+                        this,
+                        stage);
                 fxmlLoader.setController(emailUpdateController);
                 titleName = "Update email";
             }
