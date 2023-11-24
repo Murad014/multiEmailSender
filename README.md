@@ -1,2 +1,3 @@
 # multiEmailSender
-Multi Email Sender at the same time. Multi Thread
+1) JavaFX
+2) Multi Thread
