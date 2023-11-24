@@ -10,6 +10,8 @@ import javafx.fxml.FXML;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
+import javafx.scene.input.KeyCode;
+import javafx.scene.input.KeyEvent;
 
 import java.util.Enumeration;
 import java.util.Map;
@@ -37,6 +39,8 @@ public class PropertiesEmailController {
     @FXML
     public void initialize(){
         addElementsToPropertiesTableView();
+        propertiesTableView.setOnKeyPressed(this::handleKeyPressed);
+
     }
 
     @FXML
@@ -74,12 +78,19 @@ public class PropertiesEmailController {
         emailSenderModel.getProperties().put(key, value);
     }
 
+    private void handleKeyPressed(KeyEvent event) {
+        if (event.getCode() == KeyCode.DELETE) {
+            deleteSelectedRowAndFromEmailSenderProp();
+        }
+    }
+    private void deleteSelectedRowAndFromEmailSenderProp() {
+        Map.Entry<Object, Object> selectedProperty = propertiesTableView.getSelectionModel().getSelectedItem();
+        if (selectedProperty != null) {
+            emailSenderModel.getProperties().remove(selectedProperty.getKey());
+            addElementsToPropertiesTableView();
+        }
 
-
-
-
-
-
+    }
 
 
 }

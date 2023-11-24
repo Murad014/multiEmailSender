@@ -40,6 +40,7 @@ public class EmailSenderThread extends Thread{
 
     private void waitForFinishCountdown() throws ParseException, InterruptedException {
         System.out.println("waitForFinishCountdown... ");
+        senderModel.setStatus("PROCESSING");
         SimpleDateFormat dateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         Date desiredTime = dateFormat.parse(Utils.minusBeforeAtFromDesiredTime(senderModel.getDesiredDateTime(),
                 senderModel.getBeforeSendSecond()));
@@ -56,6 +57,7 @@ public class EmailSenderThread extends Thread{
             senderModel.setCountDown(timeDiff);
             timeDiff = (desiredTime.getTime() - new Date().getTime()) / 100;
         }
+        senderModel.setCountDown(0.00);
     }
 
 
@@ -101,7 +103,6 @@ public class EmailSenderThread extends Thread{
             sender.setStatus("FAILED");
             System.out.println("Error sending email from " + sender.getSenderEmail() + ": " + e.getMessage());
         }
-
 
     }
 

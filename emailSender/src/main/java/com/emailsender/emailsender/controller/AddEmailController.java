@@ -46,12 +46,16 @@ public class AddEmailController {
 
     private final EmailSenderModel emailSender;
     private final MainController mainController;
+    private final Stage stage;
 
 
     public AddEmailController(EmailSenderModel emailSender,
-                              MainController mainController){
+                              MainController mainController,
+                              Stage stage){
         this.emailSender = emailSender;
         this.mainController = mainController;
+        this.stage = stage;
+
     }
 
     @FXML
@@ -65,6 +69,9 @@ public class AddEmailController {
         EmailSendFormValidation.isValidEmailForm(emailSenderModel);
         mainController.addEmailToEmailsListTable(emailSenderModel);
         mainController.addEmailToEmailsSenderModel(emailSenderModel);
+        stage.close();
+        mainController.addEmailBtn.setDisable(false);
+        mainController.updateEmailBtn.setDisable(false);
 
     }
 

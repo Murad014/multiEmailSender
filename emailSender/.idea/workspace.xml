@@ -4,15 +4,18 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="Stop thread problem has.">
+    <list default="true" id="04edab0b-e5d5-4499-8163-16b4dbd8148c" name="Changes" comment="Column is fixing.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/emails.txt" beforeDir="false" afterPath="$PROJECT_DIR$/emails.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/MainApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/MainApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/TestMain.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/AddEmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/MainController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/model/EmailSenderModel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/PropertiesEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/PropertiesEmailController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/UpdateEmailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/controller/UpdateEmailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/service/EmailSenderService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/service/EmailSenderService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/service/MainTableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/service/MainTableService.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/threads/EmailSenderThread.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/emailsender/emailsender/threads/EmailSenderThread.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/com/emailsender/emailsender/main-view.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,21 +56,21 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "Send__Email__Multithread",
-    "ignore.virus.scanning.warn.message": "true",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "reference.settings.project.maven.importing"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Send__Email__Multithread&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settings.project.maven.importing&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.emailsender.emailsender.controller" />
@@ -250,7 +253,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700506628648</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Column is fixing.">
+      <option name="closed" value="true" />
+      <created>1700508988766</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1700508988766</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -279,7 +290,8 @@
     <MESSAGE value="thread almost ready but does not work yet." />
     <MESSAGE value="thread 2" />
     <MESSAGE value="Stop thread problem has." />
-    <option name="LAST_COMMIT_MESSAGE" value="Stop thread problem has." />
+    <MESSAGE value="Column is fixing." />
+    <option name="LAST_COMMIT_MESSAGE" value="Column is fixing." />
   </component>
   <component name="com.github.evgenys91.machinet.common.dslhistory.DslHistoryState">
     <option name="historyDtoById">
