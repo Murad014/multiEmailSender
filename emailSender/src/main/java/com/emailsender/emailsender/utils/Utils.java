@@ -19,7 +19,8 @@ public class Utils {
 
     public static void fillEmailSendersModelFromConfig(EmailSendersModel emailSendersModel){
         String emailSendersModelString = FileUtils.readStringFromFile(ConfigHelper.fileName);
-        emailSendersModel.emailSenderModel = JsonUtils.convertJsonStringToObject(emailSendersModelString);
+        if(emailSendersModelString != null)
+            emailSendersModel.emailSenderModel = JsonUtils.convertJsonStringToObject(emailSendersModelString);
     }
 
     public static <T> void deleteEmailSenderFromEmailSendersModel(EmailSendersModel emails,
